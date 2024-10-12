@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import Slider from "react-slick"; // Importation de react-slick
-import "slick-carousel/slick/slick.css"; // Import des styles de slick-carousel
-import "slick-carousel/slick/slick-theme.css";
-import CardReview from './CardReview'; // Importation du composant CardReview
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import CardReview from './CardReview';
 
 const ReviewsSection: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState<number>(0); // État pour stocker la slide active
-  const [isMobile, setIsMobile] = useState<boolean>(false); // Pour vérifier si on est en mode mobile
+  const [currentSlide, setCurrentSlide] = useState<number>(0);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
-  // Fonction pour détecter si l'utilisateur est sur mobile
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Si l'écran est inférieur à 768px
+      setIsMobile(window.innerWidth < 768);
     };
 
-    // Exécuter lors du montage et à chaque redimensionnement
     window.addEventListener('resize', handleResize);
-    handleResize(); // Détecter à l'initialisation
+    handleResize();
 
     return () => {
       window.removeEventListener('resize', handleResize);
@@ -24,62 +22,76 @@ const ReviewsSection: React.FC = () => {
   }, []);
 
   const settings = {
-    dots: true, // Affiche des points sous le carrousel
-    infinite: true, // Boucle infinie des slides
-    speed: 500, // Vitesse de transition
-    slidesToShow: 3, // Nombre d'éléments visibles par slide (sur écran normal)
-    slidesToScroll: 1, // Nombre d'éléments à faire défiler
-    centerMode: true, // Active le mode centré
-    centerPadding: "0", // Retirer le padding pour une meilleure vue des cartes
-    beforeChange: (oldIndex: number, newIndex: number) => setCurrentSlide(newIndex), // Met à jour la slide active
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: '0',
+    beforeChange: (oldIndex: number, newIndex: number) => setCurrentSlide(newIndex),
     responsive: [
       {
-        breakpoint: 1024, // Tablettes et écrans moyens
+        breakpoint: 1024,
         settings: {
-          slidesToShow: 2, // Afficher 2 slides sur les tablettes
+          slidesToShow: 2,
           slidesToScroll: 1,
           centerMode: true,
           arrows: true,
         },
       },
       {
-        breakpoint: 768, // Mobile et petits écrans
+        breakpoint: 768,
         settings: {
-          slidesToShow: 1, // Un seul élément visible sur mobile
+          slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false, // Supprime les flèches sur mobile
+          arrows: false,
         },
       },
     ],
   };
 
-  // Calcul de l'index central pour les écrans non mobiles
-  const centerIndex = isMobile ? currentSlide : Math.floor((currentSlide + 1) % 3); // Ajuster l'index pour centrer
+  const centerIndex = isMobile ? currentSlide : Math.floor((currentSlide + 1) % 3);
+
+  const reviews = [
+    {
+      name: 'Sophie Darelle',
+      reviewText:
+        "Le service de nettoyage de fin de chantier a été impeccable. L'équipe a été très professionnelle, efficace, et discrète. Nos locaux étaient parfaitement propres et prêts à l'usage. Je recommande vivement leurs services !",
+    },
+    {
+      name: 'Felix Jimoh',
+      reviewText:
+        "Depuis que nous avons fait appel à cette entreprise pour l'entretien de nos bureaux, l'environnement de travail est nettement plus agréable. Leur équipe est toujours ponctuelle, discrète, et le travail est irréprochable.",
+    },
+    {
+      name: 'Thomas Matt',
+      reviewText:
+        "Un excellent service de nettoyage résidentiel ! Ils ont su s'adapter à nos besoins spécifiques et ont laissé notre maison impeccable. Je suis très satisfait et je les recommande sans hésitation.",
+    },
+  ];
 
   return (
     <section className="py-16 px-0 md:px-8 bg-white">
       <div className="container mx-auto px-4 text-center">
-        {/* Titre de la section */}
         <h2 className="text-3xl md:text-[50px] font-bold mb-4 text-customBlue">
-          <span className='text-black'>Que disent</span> nos clients ?
+          <span className="text-black">Que disent</span> nos clients ?
         </h2>
 
-        {/* Texte descriptif */}
         <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto mb-8">
           Écoutez les témoignages de nos clients et clients satisfaits.
         </p>
 
-        {/* Carrousel avec react-slick */}
         <div className="center w-full">
           <Slider {...settings} className="mt-10">
-            {[0, 1, 2].map((index) => (
+            {reviews.map((review, index) => (
               <div
                 key={index}
                 className={`w-full transition-transform duration-500 ease-in-out my-5 ${
                   centerIndex === index ? isMobile ? 'scale-90' : 'scale-110' : 'scale-90'
                 }`}
               >
-                <CardReview />
+                <CardReview name={review.name} reviewText={review.reviewText} />
               </div>
             ))}
           </Slider>

@@ -82,10 +82,10 @@ const ServicesSection = () => {
 
         <div className="mt-16">
           <Slider {...settings}>
-            <Product />
-            <Product />
-            <Product />
-            <Product />
+            <Product imageSrc={"/img/Image-2024-03-22-a-14.52.50_f1784963x.png"} title={"Nettoyage de fin de chantier"} price={1500} description={"Notre équipe de fin de chantier, formée et équipée, assure un nettoyage efficace, discret et respectueux de vos locaux, tout en étant à l’écoute de vos besoins."}/>
+            <Product imageSrc={"/img/gloved-hands-young-african-american-man-with-duster-wiping-computer-screen-scaled.png"} title={"Entretient de bureau"} price={1500} description={"Un espace propre favorise un environnement sain et l’efficacité de votre équipe. Nous assurons la propreté de vos bureaux pour un lieu propice à la réussite."}/>
+            <Product imageSrc={"/img/afro-woman-holding-bucket-with-cleaning-items-2048x1366.png"} title={"Nettoyage de maison résidentielle"} price={1500} description={"Votre maison mérite l’attention qu’elle mérite. Nous offrons des services de nettoyage résidentiel personnalisés pour créer un environnement domestique propre et accueillant."}/>
+            <Product imageSrc={"/img/2150358980.png"} title={"Nettoyage des portes et des vitres"} price={1500} description={"Les détails font la différence. Nous nous assurons que chaque recoin, y compris les portes et les vitres, est d’une propreté impeccable, ajoutant une touche de perfection à votre espace."}/>
           </Slider>
         </div>
       </div>

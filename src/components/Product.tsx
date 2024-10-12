@@ -1,13 +1,20 @@
 import Image from 'next/image';
 
-const Product = () => {
+type ProductProps = {
+  imageSrc: string;
+  title: string;
+  price: number;
+  description: string;
+};
+
+const Product: React.FC<ProductProps> = ({ imageSrc, title, price, description }) => {
   return (
     <div className="max-w-sm mx-auto relative mb-56">
       {/* Image du produit */}
       <div className="w-full">
         <Image
-          src="/img/2150358980.png"
-          alt="Nettoyage de fin de chantier"
+          src={imageSrc}
+          alt={title}
           width={500}
           height={300}
           className="object-cover rounded-t-lg"
@@ -16,11 +23,11 @@ const Product = () => {
 
       {/* Bloc d'informations superposé sur l'image */}
       <div className="bg-white p-6 rounded-3xl shadow-xl absolute w-11/12 left-1/2 transform -translate-x-1/2 -translate-y-24">
-        <h3 className="text-xl font-bold mb-2">Nettoyage de fin de chantier</h3>
+        <h3 className="text-xl font-bold mb-2">{title}</h3>
         <p className="text-sm text-black mb-1">à partir de</p>
-        <p className="text-customGreen text-2xl font-bold mb-2">1500€</p>
+        <p className="text-customGreen text-2xl font-bold mb-2">{price}€</p>
         <p className="text-base text-black mb-2">
-          Notre équipe de fin de chantier, formée et équipée, assure un nettoyage efficace, discret et respectueux de vos locaux, tout en étant à l’écoute de vos besoins.
+          {description}
         </p>
 
         {/* Bouton d'appel à l'action */}
