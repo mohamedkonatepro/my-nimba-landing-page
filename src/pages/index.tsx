@@ -1,5 +1,4 @@
 import AboutSection from "@/components/AboutSection";
-import CardReview from "@/components/CardReview";
 import ContactForm from "@/components/ContactForm";
 import FirstSection from "@/components/FirstSection";
 import Footer from "@/components/Footer";
