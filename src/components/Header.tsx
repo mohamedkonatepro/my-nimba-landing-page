@@ -50,10 +50,10 @@ const Header = () => {
           {['Accueil', 'A propos', 'Nos services', 'Contact'].map((item) => (
             <Link
               key={item}
-              href={`#${item.toLowerCase().replace(' ', '')}`}
+              href={item === 'Accueil' ? '' :`#${item.toLowerCase().replace(' ', '')}`}
               className={`text-black border-b-2 ${
                 active === item ? 'border-customBlue text-customBlue' : 'border-none'
-              } hover:border-solid hover:border-customBlue hover:text-customBlue pb-1 transition-all`}
+              } hover:border-solid hover:border-customBlue hover:text-customBlue pb-2 transition-all`}
               onClick={() => setActive(item)}
             >
               {item}
@@ -64,7 +64,7 @@ const Header = () => {
         {/* Call-to-Action Button (visible en mode desktop) */}
         <div className="hidden md:block">
           <Link
-            href="#cta"
+            href="#contact"
             className="bg-customBlue rounded-xl text-white px-4 py-3 hover:bg-blue-700 transition-all"
           >
             Devis gratuit

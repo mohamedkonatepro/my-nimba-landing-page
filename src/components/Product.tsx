@@ -9,7 +9,7 @@ type ProductProps = {
 
 const Product: React.FC<ProductProps> = ({ imageSrc, title, price, description }) => {
   return (
-    <div className="max-w-sm mx-auto relative mb-56">
+    <div className="max-w-sm mx-auto relative mb-72">
       {/* Image du produit */}
       <div className="w-full">
         <Image

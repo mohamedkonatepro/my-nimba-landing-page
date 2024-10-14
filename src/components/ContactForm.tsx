@@ -45,7 +45,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <section className="relative py-16 px-8 bg-lightBlue">
+    <section className="relative py-16 px-8 bg-lightBlue" id="contact">
       <div className="container mx-auto flex flex-col-reverse md:flex-row items-start">
 
         {/* Image en fond */}

@@ -9,7 +9,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="bg-lightBlue py-4 md:py-16 relative z-0">
+    <section className="bg-lightBlue py-4 md:py-16 relative z-0" id="apropos">
       <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between space-y-8 md:space-y-0 md:space-x-4">
         
         {/* Partie droite : Texte (en haut sur mobile) */}

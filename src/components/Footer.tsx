@@ -1,9 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import { BsSendFill } from 'react-icons/bs';
-import { FaPhone, FaFacebook, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaPhone, FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { MdLocationOn } from 'react-icons/md';
 import { HiOutlineMail } from 'react-icons/hi';
+import Link from 'next/link';
+import { FaXTwitter } from "react-icons/fa6";
+
 
 const Footer: React.FC = () => {
   return (
@@ -27,10 +30,10 @@ const Footer: React.FC = () => {
         <div className="mb-8 md:mb-0">
           <h3 className="font-bold text-lg mb-4">Liens rapides</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:underline">Accueil</a></li>
-            <li><a href="#" className="hover:underline">Nos services</a></li>
-            <li><a href="#" className="hover:underline">À propos</a></li>
-            <li><a href="#" className="hover:underline">Contact</a></li>
+            <li><Link href="" className="hover:underline">Accueil</Link></li>
+            <li><Link href="#nosservices" className="hover:underline">Nos services</Link></li>
+            <li><Link href="#apropos" className="hover:underline">À propos</Link></li>
+            <li><Link href="#contact" className="hover:underline">Contact</Link></li>
           </ul>
         </div>
 
@@ -54,10 +57,10 @@ const Footer: React.FC = () => {
         <div>
           <h3 className="font-bold text-lg mb-4">Nos réseaux sociaux</h3>
           <div className="flex space-x-4 mb-4">
-            <a href="#" className="hover:underline"><FaFacebook /></a>
-            <a href="#" className="hover:underline"><FaTwitter /></a>
-            <a href="#" className="hover:underline"><FaInstagram /></a>
-            <a href="#" className="hover:underline"><FaLinkedinIn /></a>
+            <Link href="#" className="hover:underline"><FaFacebookF /></Link>
+            <Link href="#" className="hover:underline"><FaXTwitter /></Link>
+            <Link href="#" className="hover:underline"><FaInstagram /></Link>
+            <Link href="#" className="hover:underline"><FaLinkedinIn /></Link>
 
           </div>
           <div className="relative mb-4">
@@ -77,7 +80,7 @@ const Footer: React.FC = () => {
       {/* Barre du bas */}
       <div className="border-t border-white mt-8 pt-4 px-6">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-white mb-4 md:mb-0">©2024. MYNIMBA. All Rights Reserved.</p>
+          <p className="text-sm text-white mb-4 md:mb-0">©2024. MYNIMBA. Tous droits réservés.</p>
           <div className="flex space-x-4">
             <a href="#" className="text-sm text-white hover:underline">Politique de confidentialité</a>
             <a href="#" className="text-sm text-white hover:underline">Conditions générales</a>

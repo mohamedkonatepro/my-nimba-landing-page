@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { MdArrowOutward } from 'react-icons/md';
+import Link from 'next/link';
 
 const FreeQuoteSection: React.FC = () => {
   return (
@@ -60,11 +61,12 @@ const FreeQuoteSection: React.FC = () => {
             Remplissez un devis pour chiffrer votre projet et connaître le prix de nos prestations de nettoyage.
           </p>
 
-          {/* Bouton centré */}
-          <button className="mt-8 bg-customBlue text-white px-16 md:px-6 py-3 rounded-xl hover:bg-blue-700 transition-all flex items-center">
-            <span className="mr-2">Devis comparatif</span>
-            <MdArrowOutward className="text-white" size={20} />
-          </button>
+          <Link href={"#contact"}>
+            <button className="mt-8 bg-customBlue text-white px-16 md:px-6 py-3 rounded-xl hover:bg-blue-700 transition-all flex items-center">
+              <span className="mr-2">Devis comparatif</span>
+              <MdArrowOutward className="text-white" size={20} />
+            </button>
+          </Link>
         </div>
       </div>
     </section>

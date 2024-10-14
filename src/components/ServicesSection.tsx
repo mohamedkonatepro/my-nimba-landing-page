@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { NextArrow, PrevArrow } from "./Arrow";
+import Link from "next/link";
 
 const ServicesSection = () => {
   const settings = {
@@ -28,17 +29,19 @@ const ServicesSection = () => {
   };
 
   return (
-    <section className="bg-white py-8 md:py-16">
+    <section className="bg-white py-8 md:py-16" id="nosservices">
       <div className="container mx-auto px-4">
         {/* Titre et bouton */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <h2 className="text-3xl md:text-5xl font-bold text-left mb-4 md:mb-0">
             Nos <span className="text-customBlue">services</span>
           </h2>
-          <button className="hidden md:flex bg-white border border-customBlue text-customBlue px-4 py-2 md:px-6 md:py-3 rounded-xl items-center space-x-2">
-            <span>Demandez un devis comparatif</span>
-            <MdArrowOutward className="text-customBlue" size={20} />
-          </button>
+          <Link href={"#contact"}>
+            <button className="hidden md:flex bg-white border border-customBlue text-customBlue px-4 py-2 md:px-6 md:py-3 rounded-xl items-center space-x-2">
+              <span>Demandez un devis comparatif</span>
+              <MdArrowOutward className="text-customBlue" size={20} />
+            </button>
+          </Link>
         </div>
 
         {/* Texte sous le titre */}
