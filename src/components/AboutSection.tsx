@@ -18,18 +18,21 @@ const AboutSection = () => {
             <span className="text-customBlue">À propos</span> de nous
           </h2>
           <p className="text-base md:text-lg mb-4">
-            <strong>MyNimba</strong> est une entreprise de nettoyage de premier plan, dédiée à fournir des services de nettoyage de la plus haute qualité. Forte de plusieurs expériences dans le domaine, notre équipe de <strong>professionnels</strong> hautement qualifiés est engagée à <strong>maintenir les normes</strong> les plus élevées de propreté et d’hygiène.
+            <strong>MyNimba</strong> est une entreprise de nettoyage de premier plan, dédiée à fournir des services de nettoyage de la plus haute qualité.
           </p>
           <p className="text-base md:text-lg mb-4">
-            Nous nous distinguons par notre engagement à offrir des <strong>services personnalisés</strong> pour répondre aux besoins spécifiques de chaque client. Nous comprenons que chaque espace est unique et nécessite une <strong>approche de nettoyage sur mesure</strong>, et c’est exactement ce que nous offrons.
+            {"Nous renforçons la réussite de l'exécution de vos travaux de nettoyage par des équipes qualifiés et professionnelles."}
+          </p>
+          <p className="text-base md:text-lg mb-4">
+            Nous nous engageons à vous offrir une expérience de qualité exceptionnelle, reflétant notre dévouement à l’excellence. 
           </p>
           <p className="text-base md:text-lg mb-8">
-            Votre satisfaction est notre priorité et notre motivation.
+            Nous comprenons que chaque espace client est unique et nécessite une approche de nettoyage sur mesure, et c’est exactement ce que nous offrons.
+            Notre objectif est de toujours surpasser vos attentes, Votre satisfaction est notre priorité et notre motivation.
           </p>
 
-          {/* Bouton "Laisser un commentaire" */}
           <button className="bg-customBlue text-white px-6 py-3 rounded-xl">
-            Laisser un commentaire
+            Prendre rendez-vous
           </button>
         </div>
 

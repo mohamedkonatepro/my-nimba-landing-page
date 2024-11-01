@@ -46,7 +46,7 @@ const ServicesSection = () => {
 
         {/* Texte sous le titre */}
         <p className="text-sm md:text-lg mb-8 text-left">
-          Nous nous engageons à vous offrir une expérience de qualité exceptionnelle, reflétant notre dévouement à l’excellence. Notre objectif est de toujours surpasser vos attentes, en fournissant un service qui transcende le standard grâce à notre expertise inégalée.
+          Nous accompagnons nos clients avec une gamme variés de <strong>services allant du</strong> nettoyage de fin de chantier au <strong>nettoyage</strong> régulier <strong>de leurs propriétés</strong>. Notre équipe de <strong>professionnels</strong> hautement qualifiés est engagée à <strong>maintenir les normes</strong> les plus élevées de propreté et d’hygiène.
         </p>
 
         {/* Images avec le texte */}
@@ -85,10 +85,12 @@ const ServicesSection = () => {
 
         <div className="mt-16">
           <Slider {...settings}>
-            <Product imageSrc={"/img/Image-2024-03-22-a-14.52.50_f1784963x.png"} title={"Nettoyage de fin de chantier"} price={1500} description={"Notre équipe de fin de chantier, formée et équipée, assure un nettoyage efficace, discret et respectueux de vos locaux, tout en étant à l’écoute de vos besoins."}/>
-            <Product imageSrc={"/img/gloved-hands-young-african-american-man-with-duster-wiping-computer-screen-scaled.png"} title={"Entretient de bureau"} price={1500} description={"Un espace propre favorise un environnement sain et l’efficacité de votre équipe. Nous assurons la propreté de vos bureaux pour un lieu propice à la réussite."}/>
-            <Product imageSrc={"/img/afro-woman-holding-bucket-with-cleaning-items-2048x1366.png"} title={"Nettoyage de maison résidentielle"} price={1500} description={"Votre maison mérite l’attention qu’elle mérite. Nous offrons des services de nettoyage résidentiel personnalisés pour créer un environnement domestique propre et accueillant."}/>
-            <Product imageSrc={"/img/2150358980.png"} title={"Nettoyage des portes et des vitres"} price={1500} description={"Les détails font la différence. Nous nous assurons que chaque recoin, y compris les portes et les vitres, est d’une propreté impeccable, ajoutant une touche de perfection à votre espace."}/>
+            <Product imageSrc={"/img/Image-2024-03-22-a-14.52.50_f1784963x.png"} title={"Nettoyage de fin de chantier"} description={"Sécurisé la livraison de vos chantiers avec un service personnalisé réalisé par des équipes de proximités qui ont le goût du travail bien fait dans les délais"}/>
+            <Product imageSrc={"/img/gloved-hands-young-african-american-man-with-duster-wiping-computer-screen-scaled.png"} title={"Manutention"} description={"Mise à disposition des bennes sur les lieux du chantier et débarrassassent au fil de l'eau des débris par des rotations entre les  interventions des prestataires."}/>
+            <Product imageSrc={"/img/afro-woman-holding-bucket-with-cleaning-items-2048x1366.png"} title={"Nettoyage de bureaux"} description={"Conserver vos lieux de travail propres avec un nettoyage des espaces de bureaux, mobilier et des espaces de circulation avec des interventions adaptées à vos horaires de travail."}/>
+            <Product imageSrc={"/img/2150358980.png"} title={"Nettoyage événementiel"} description={"Pour garantir l’a réussite de vos évènements par la préservation des surfaces communes par un nettoyage avant, pendant et après l’évènement."}/>
+            <Product imageSrc={"/img/2150358980.png"} title={"Nettoyage de propriétés privées"} description={"Nous réalisons le nettoyage régulier ou saisonnier (printemps) de maisons et d'appartements, ainsi qu’en fin de bail ou ménage avant état des lieux."}/>
+            <Product imageSrc={"/img/2150358980.png"} title={"Nettoyage de vitres"} description={"Préservation vos biens présentable avec le nettoyage et l'entretien de lavage de vitrerie, surfaces vitrées, baies vitrées, fenêtres en hauteur, verrières ou véranda."}/>
           </Slider>
         </div>
       </div>

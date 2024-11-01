@@ -8,11 +8,11 @@ const TrustSection = () => {
       <div className="absolute inset-0 bg-black opacity-40"></div>
       
       <div className="relative z-10 container mx-auto px-4 flex flex-col justify-center items-center text-center pt-8 md:pt-16">
-        <h2 className="text-3xl md:text-[50px] font-bold mb-4">
-          Faites confiance à une équipe dynamique
+        <h2 className="text-3xl md:text-[40px] font-bold mb-4">
+          Nos collaborateurs utilisent des équipements de pointe 
         </h2>
         <p className="text-base md:text-lg max-w-3xl">
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s.
+          Nous adaptons des produits industriels spécialisés pour le nettoyage de surfaces et respectueux de l’environnement pour minimiser notre impact écologique. 
         </p>
       </div>
     </section>

@@ -12,7 +12,7 @@ const Header = () => {
         {/* Logo */}
         <Link href="/" className="text-black font-bold text-xl">
           <div className="logo flex items-center space-x-4">
-            <Image src="/logo.svg" width={150} height={150} alt="MyNimba Logo" />
+            <Image src="/img/Logo H S.png" width={150} height={150} alt="MyNimba Logo" />
           </div>
         </Link>
 
@@ -93,7 +93,7 @@ const Header = () => {
             ))}
             {/* Call-to-Action Button dans le menu mobile */}
             <Link
-              href="#cta"
+              href="#contact"
               className="bg-customBlue rounded-xl text-white px-6 py-3 hover:bg-blue-700 transition-all"
             >
               Devis gratuit

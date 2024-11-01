@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
         {/* Partie 1 : Logo et description */}
         <div className="mb-8 md:mb-0">
           <Image
-            src="/img/Groupe 8674.svg"
+            src="/img/Logo Blanc V.png"
             alt="Logo de l'entreprise"
             width={110}
             height={110}

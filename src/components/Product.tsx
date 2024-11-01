@@ -3,11 +3,10 @@ import Image from 'next/image';
 type ProductProps = {
   imageSrc: string;
   title: string;
-  price: number;
   description: string;
 };
 
-const Product: React.FC<ProductProps> = ({ imageSrc, title, price, description }) => {
+const Product: React.FC<ProductProps> = ({ imageSrc, title, description }) => {
   return (
     <div className="max-w-sm mx-auto relative mb-72">
       {/* Image du produit */}
@@ -24,8 +23,8 @@ const Product: React.FC<ProductProps> = ({ imageSrc, title, price, description }
       {/* Bloc d'informations superposé sur l'image */}
       <div className="bg-white p-6 rounded-3xl shadow-xl absolute w-11/12 left-1/2 transform -translate-x-1/2 -translate-y-24">
         <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-sm text-black mb-1">à partir de</p>
-        <p className="text-customGreen text-2xl font-bold mb-2">{price}€</p>
+        {/* <p className="text-sm text-black mb-1">à partir de</p> */}
+        <p className="text-customGreen text-lg font-bold mb-2">Sur devis</p>
         <p className="text-base text-black mb-2">
           {description}
         </p>

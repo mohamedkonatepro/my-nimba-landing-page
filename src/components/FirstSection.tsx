@@ -9,10 +9,11 @@ const FirstSection = () => {
         {/* Partie gauche : Texte */}
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h1 className="text-3xl md:text-4xl font-bold">
-            <span className="text-customBlue">Entreprise</span> spécialisée dans le <span className="text-customGreen">nettoyage</span>
+            Le nettoyage professionnel <span className="text-customGreen">adapté à vos besoins</span>
           </h1>
           <p className="text-base md:text-lg mt-4">
-            Entreprise de nettoyage de premier plan, dédiée à fournir des services de nettoyage de la plus haute qualité. Forte de plusieurs expériences dans le domaine, notre équipe de professionnels...
+          Du nettoyage de qualité personnalisé aux besoins spécifiques de chaque client tout respectant strictement les normes de sécurité et d’hygiène. <br />
+          Nos équipes sont formées pour maintenir ces zones dans un état de propreté optimal tout en respect des délais de prestation. 
           </p>
 
           {/* Boutons */}
