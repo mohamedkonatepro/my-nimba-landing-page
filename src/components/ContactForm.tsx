@@ -39,9 +39,46 @@ const ContactForm: React.FC = () => {
     setIsClient(true);
   }, []);
 
+  const createCampaign = async (data: ContactFormValues) => {
+    const formattedMessage = data.message.replace(/\n/g, '<br>'); // Replace line breaks with <br> tags
+
+    const campaignData = {
+      subject: data.subject,
+      sender: { name: "MyNimba", email: process.env.NEXT_PUBLIC_BREVO_FROM_EMAIL },
+      htmlContent: `
+        <h2>Nouvelle demande de contact</h2>
+        <p><strong>Nom:</strong> ${data.name}</p>
+        <p><strong>Téléphone:</strong> ${data.phone}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Sujet:</strong> ${data.subject}</p>
+        <p><strong>Message:</strong><br> ${formattedMessage}</p>
+      `,
+      to: [{ email: process.env.NEXT_PUBLIC_BREVO_TO_EMAIL }],
+    };
+
+    try {
+      const response = await fetch('https://api.brevo.com/v3/smtp/email', {
+        method: 'POST',
+        headers: {
+          'api-key': process.env.NEXT_PUBLIC_BREVO_API_KEY || '',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(campaignData),
+      });
+      
+      if (!response.ok) throw new Error(`Error: ${response.statusText}`);
+
+      const result = await response.json();
+      alert('Campaign created successfully!');
+      console.log(result);
+    } catch (error) {
+      console.error('Error creating campaign:', error);
+      alert('Failed to create campaign.');
+    }
+  };
+
   const onSubmit = (data: ContactFormValues) => {
-    console.log('Form data: ', data);
-    alert('Formulaire envoyé avec succès !');
+    createCampaign(data);
   };
 
   return (
@@ -104,7 +141,7 @@ const ContactForm: React.FC = () => {
                 {isClient && (
                   <Select
                     options={subjectOptions}
-                    onChange={(option) => setValue('subject', option?.value || '')}
+                    onChange={(option) => setValue('subject', option?.label || '')}
                     placeholder="Sélectionnez un sujet"
                     className="w-full"
                   />
