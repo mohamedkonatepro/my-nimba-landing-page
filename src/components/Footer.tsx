@@ -42,13 +42,13 @@ const Footer: React.FC = () => {
           <h3 className="font-bold text-lg mb-4">Infos contact</h3>
           <ul className="space-y-4">
             <li className="flex items-center">
-              <BsSendFill size={20} className="mr-2" /> info@mynimba.com
+              <BsSendFill size={20} className="mr-2" /> contact@mynimba.com
             </li>
             <li className="flex items-center">
-              <FaPhone size={20} className="mr-2" /> 0033 0619577464 / 0033 0749492178
+              <FaPhone size={20} className="mr-2" /> +33 7 58 80 80 80 (France) <br /> +224 629449847 (Guinée)
             </li>
             <li className="flex items-center">
-              <MdLocationOn size={25} className="mr-2" /> 11, Odo-Olowu, Ijeshatedo B/Stop, Surulere
+              <MdLocationOn size={25} className="mr-2" /> 1 – 3, boulevard Charles de Gaulle <br />  92707 Colombes Cedex
             </li>
           </ul>
         </div>

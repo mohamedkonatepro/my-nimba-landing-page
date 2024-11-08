@@ -183,7 +183,7 @@ const ContactForm: React.FC = () => {
               <BsSendFill className="text-customBlue text-2xl mr-2" />
               <div className='ml-2'>
                 <p className="font-bold">Envoyer un email</p>
-                <p>info@mynimba.com</p>
+                <p>contact@mynimba.com</p>
               </div>
             </div>
 
@@ -192,7 +192,7 @@ const ContactForm: React.FC = () => {
               <FaPhone className="text-customBlue text-2xl mr-2" />
               <div className='ml-2'>
                 <p className="font-bold">Appelez-nous</p>
-                <p>0033 0619577464 - 0033 0749492178</p>
+                <p>+33 7 58 80 80 80 (France) - +224 629449847 (Guinée)</p>
               </div>
             </div>
 
@@ -201,7 +201,7 @@ const ContactForm: React.FC = () => {
               <MdLocationOn className="text-customBlue text-2xl mr-2" />
               <div className='ml-2'>
                 <p className="font-bold">Adresse du bureau</p>
-                <p>11, Odo-Olowu, Ijeshatedo B/Stop, Surulere</p>
+                <p>1 – 3, boulevard Charles de Gaulle 92707 Colombes Cedex</p>
               </div>
             </div>
 
@@ -210,7 +210,7 @@ const ContactForm: React.FC = () => {
               <IoTime className="text-customBlue text-2xl mr-2" />
               <div className='ml-2'>
                 <p className="font-bold">Horaires de travail</p>
-                <p>Mon - Sat: 10am - 4pm</p>
+                <p>Lun - Dim: 10am - 6pm</p>
               </div>
             </div>
           </div>

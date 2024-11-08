@@ -53,26 +53,24 @@ const ServicesSection = () => {
         <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 mb-8">
           {/* Image de gauche */}
           <div className="relative w-full md:w-1/2">
-            <Image src="/Groupe 8914.png" alt="Service Image" width={500} height={300} className="object-cover w-full h-auto rounded-lg" />
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-0 text-left w-full rounded-3xl px-8">
-              <h3 className="text-xl md:text-3xl text-white">Service Résidentiel</h3>
-              <p className="text-customGreen text-sm">à partir de</p>
-              <p className="text-customGreen text-2xl md:text-3xl font-bold">1500€</p>
+            <Image src="/img/nettoyage-de-fin-de-chantier-@2x.png" alt="Service Image" width={500} height={300} className="object-cover w-full h-auto rounded-lg" />
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-b from-transparent via-black to-black text-left w-full rounded-b-3xl px-8">
+              <h3 className="text-xl md:text-3xl text-white mb-2">Nettoyage de fin de chantier</h3>
+              <p className="text-customGreen text-lg md:text-2xl font-bold mb-2">Sur devis</p>
               <p className="text-white text-sm md:text-lg">
-                Votre maison mérite l’attention qu’elle mérite. Nous offrons des services de nettoyage résidentiel personnalisés pour créer un environnement domestique propre et accueillant.
+                Livrez vos chantiers avec un nettoyage garantie par des équipes de proximités qui ont le goût du travail bien fait dans les délais.
               </p>
             </div>
           </div>
 
           {/* Image de droite */}
           <div className="relative w-full md:w-1/2">
-            <Image src="/Groupe 8913.png" alt="Service Image" width={500} height={300} className="object-cover w-full h-auto rounded-lg" />
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-0 text-left w-full rounded-3xl px-8">
-              <h3 className="text-xl md:text-3xl text-white">Manutention</h3>
-              <p className="text-customGreen text-sm">à partir de</p>
-              <p className="text-customGreen text-2xl md:text-3xl font-bold">1500€</p>
+            <Image src="/img/image0022x.png" alt="Service Image" width={500} height={300} className="object-cover w-full h-auto rounded-lg" />
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-b from-transparent via-black to-black text-left w-full rounded-b-3xl px-8">
+              <h3 className="text-xl md:text-3xl text-white mb-2">Manutention</h3>
+              <p className="text-customGreen text-lg md:text-2xl font-bold mb-2">Sur devis</p>
               <p className="text-white text-sm md:text-lg">
-                Votre maison mérite l’attention qu’elle mérite. Nous offrons des services de nettoyage résidentiel personnalisés pour créer un environnement domestique propre et accueillant.
+                {"Débarrassassent au fil de l'eau des débris sur les lieux du chantier par des rotations entre les horaires de travaux."}
               </p>
             </div>
           </div>
@@ -85,12 +83,10 @@ const ServicesSection = () => {
 
         <div className="mt-16">
           <Slider {...settings}>
-            <Product imageSrc={"/img/Image-2024-03-22-a-14.52.50_f1784963x.png"} title={"Nettoyage de fin de chantier"} description={"Sécurisé la livraison de vos chantiers avec un service personnalisé réalisé par des équipes de proximités qui ont le goût du travail bien fait dans les délais"}/>
-            <Product imageSrc={"/img/gloved-hands-young-african-american-man-with-duster-wiping-computer-screen-scaled.png"} title={"Manutention"} description={"Mise à disposition des bennes sur les lieux du chantier et débarrassassent au fil de l'eau des débris par des rotations entre les  interventions des prestataires."}/>
-            <Product imageSrc={"/img/afro-woman-holding-bucket-with-cleaning-items-2048x1366.png"} title={"Nettoyage de bureaux"} description={"Conserver vos lieux de travail propres avec un nettoyage des espaces de bureaux, mobilier et des espaces de circulation avec des interventions adaptées à vos horaires de travail."}/>
-            <Product imageSrc={"/img/2150358980.png"} title={"Nettoyage événementiel"} description={"Pour garantir l’a réussite de vos évènements par la préservation des surfaces communes par un nettoyage avant, pendant et après l’évènement."}/>
-            <Product imageSrc={"/img/2150358980.png"} title={"Nettoyage de propriétés privées"} description={"Nous réalisons le nettoyage régulier ou saisonnier (printemps) de maisons et d'appartements, ainsi qu’en fin de bail ou ménage avant état des lieux."}/>
-            <Product imageSrc={"/img/2150358980.png"} title={"Nettoyage de vitres"} description={"Préservation vos biens présentable avec le nettoyage et l'entretien de lavage de vitrerie, surfaces vitrées, baies vitrées, fenêtres en hauteur, verrières ou véranda."}/>
+            <Product imageSrc={"/img/image003.png"} title={"Nettoyage de bureaux"} description={"Conservez vos lieux de travail propres avec un nettoyage des bureaux, mobilier et des espaces de circulation entre les horaires de travail."}/>
+            <Product imageSrc={"/img/image006.png"} title={"Nettoyage événementiel"} description={"Garantissez la réussite de vos évènements par la préservation des surfaces communes avant, pendant et après l’évènement."}/>
+            <Product imageSrc={"/img/image004.png"} title={"Nettoyage de propriétés privées"} description={"Nous réalisons le nettoyage régulier ou saisonnier de maisons et appartements, en fin de bail ou avant état des lieux."}/>
+            <Product imageSrc={"/img/image005.png"} title={"Nettoyage de vitres"} description={"Préservez vos biens présentables par le lavage de vitrerie, surfaces vitrées, baies vitrées, fenêtres en hauteur, verrières ou véranda."}/>
           </Slider>
         </div>
       </div>

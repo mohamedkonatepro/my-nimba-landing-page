@@ -79,7 +79,7 @@ const ReviewsSection: React.FC = () => {
         </h2>
 
         <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto mb-8">
-          Écoutez les témoignages de nos clients et clients satisfaits.
+        Écoutez les témoignages de nos clients.
         </p>
 
         <div className="center w-full">
