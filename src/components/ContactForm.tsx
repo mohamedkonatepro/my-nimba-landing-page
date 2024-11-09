@@ -23,8 +23,15 @@ type ContactFormValues = z.infer<typeof contactSchema>;
 const subjectOptions = [
   { value: 'demande-devis', label: 'Demande de devis' },
   { value: 'service-apres-vente', label: 'Service après-vente' },
+  { value: 'nettoyage-fin-chantier', label: 'Nettoyage fin de chantier' },
+  { value: 'manutention', label: 'Manutention' },
+  { value: 'nettoyage-residence-prive', label: 'Nettoyage de résidence privé' },
+  { value: 'nettoyage-bureau', label: 'Nettoyage bureau' },
+  { value: 'nettoyage-evenementiel', label: 'Nettoyage événementiel' },
+  { value: 'nettoyage-vitres', label: 'Nettoyage de vitres' },
   { value: 'autre', label: 'Autre' },
 ];
+
 
 const ContactForm: React.FC = () => {
   const { register, handleSubmit, setValue, formState: { errors } } = useForm<ContactFormValues>({
