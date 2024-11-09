@@ -69,11 +69,11 @@ const ContactForm: React.FC = () => {
       if (!response.ok) throw new Error(`Error: ${response.statusText}`);
 
       const result = await response.json();
-      alert('Campaign created successfully!');
+      alert('Message envoyé!');
       console.log(result);
     } catch (error) {
-      console.error('Error creating campaign:', error);
-      alert('Failed to create campaign.');
+      console.error('Error sending message:', error);
+      alert('Erreur envoi de message.');
     }
   };
 
@@ -192,7 +192,7 @@ const ContactForm: React.FC = () => {
               <FaPhone className="text-customBlue text-2xl mr-2" />
               <div className='ml-2'>
                 <p className="font-bold">Appelez-nous</p>
-                <p>+33 7 58 80 80 80 (France) - +224 629449847 (Guinée)</p>
+                <p>+33 7 58 80 80 80 (France) <br /> +224 629449847 (Guinée)</p>
               </div>
             </div>
 
@@ -201,7 +201,7 @@ const ContactForm: React.FC = () => {
               <MdLocationOn className="text-customBlue text-2xl mr-2" />
               <div className='ml-2'>
                 <p className="font-bold">Adresse du bureau</p>
-                <p>1 – 3, boulevard Charles de Gaulle 92707 Colombes Cedex</p>
+                <p>1 – 3, boulevard Charles de Gaulle <br /> 92707 Colombes Cedex</p>
               </div>
             </div>
 

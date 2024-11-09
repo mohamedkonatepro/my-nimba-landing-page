@@ -31,7 +31,7 @@ const FirstSection = () => {
         {/* Right section: Image */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
           <Image
-            src="/image home.png"
+            src="/image home@2x.png"
             alt="Image d'accueil"
             width={500}
             height={500}

@@ -9,18 +9,18 @@ import Link from "next/link";
 
 const ServicesSection = () => {
   const settings = {
-    dots: true, // Affiche des points sous le carrousel
-    infinite: true, // Boucle infinie des slides
-    speed: 500, // Vitesse de transition
-    slidesToShow: 3, // Nombre d'éléments visibles par slide
-    slidesToScroll: 1, // Nombre d'éléments à faire défiler
-    prevArrow: <PrevArrow />, // Flèche gauche
-    nextArrow: <NextArrow />, // Flèche droite
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
     responsive: [
       {
-        breakpoint: 768, // Mobile et petits écrans
+        breakpoint: 768,
         settings: {
-          slidesToShow: 1, // Un seul élément visible sur mobile
+          slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false,
         },
@@ -31,7 +31,6 @@ const ServicesSection = () => {
   return (
     <section className="bg-white py-8 md:py-16" id="nosservices">
       <div className="container mx-auto px-4">
-        {/* Titre et bouton */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <h2 className="text-3xl md:text-5xl font-bold text-left mb-4 md:mb-0">
             Nos <span className="text-customBlue">services</span>
@@ -44,39 +43,36 @@ const ServicesSection = () => {
           </Link>
         </div>
 
-        {/* Texte sous le titre */}
         <p className="text-sm md:text-lg mb-8 text-left">
-          Nous accompagnons nos clients avec une gamme variés de <strong>services allant du</strong> nettoyage de fin de chantier au <strong>nettoyage</strong> régulier <strong>de leurs propriétés</strong>. Notre équipe de <strong>professionnels</strong> hautement qualifiés est engagée à <strong>maintenir les normes</strong> les plus élevées de propreté et d’hygiène.
+          Nous accompagnons nos clients avec une gamme variée de services allant du nettoyage de fin de chantier au nettoyage régulier de leurs propriétés. Notre équipe de professionnels hautement qualifiés est engagée à maintenir les normes les plus élevées de propreté et d’hygiène.
         </p>
 
-        {/* Images avec le texte */}
         <div className="flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 mb-8">
-          {/* Image de gauche */}
+          {/* Left image */}
           <div className="relative w-full md:w-1/2">
-            <Image src="/img/nettoyage-de-fin-de-chantier-@2x.png" alt="Service Image" width={500} height={300} className="object-cover w-full h-auto rounded-lg" />
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-b from-transparent via-black to-black text-left w-full rounded-b-3xl px-8">
+            <Image src="/img/nettoyage-de-fin-de-chantier-2x.png" alt="Service Image" width={500} height={300} className="object-cover w-full h-auto rounded-lg" />
+            <div className="absolute bottom-[-12px] left-0 right-0 p-4 bg-gradient-to-b from-transparent via-black to-black text-left w-full rounded-b-3xl px-8">
               <h3 className="text-xl md:text-3xl text-white mb-2">Nettoyage de fin de chantier</h3>
               <p className="text-customGreen text-lg md:text-2xl font-bold mb-2">Sur devis</p>
               <p className="text-white text-sm md:text-lg">
-                Livrez vos chantiers avec un nettoyage garantie par des équipes de proximités qui ont le goût du travail bien fait dans les délais.
+                Livrez vos chantiers avec un nettoyage garanti par des équipes de proximité qui ont le goût du travail bien fait dans les délais.
               </p>
             </div>
           </div>
 
-          {/* Image de droite */}
+          {/* Right image */}
           <div className="relative w-full md:w-1/2">
             <Image src="/img/image0022x.png" alt="Service Image" width={500} height={300} className="object-cover w-full h-auto rounded-lg" />
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-b from-transparent via-black to-black text-left w-full rounded-b-3xl px-8">
+            <div className="absolute bottom-[-12px] left-0 right-0 p-4 bg-gradient-to-b from-transparent via-black to-black text-left w-full rounded-b-3xl px-8">
               <h3 className="text-xl md:text-3xl text-white mb-2">Manutention</h3>
               <p className="text-customGreen text-lg md:text-2xl font-bold mb-2">Sur devis</p>
               <p className="text-white text-sm md:text-lg">
-                {"Débarrassassent au fil de l'eau des débris sur les lieux du chantier par des rotations entre les horaires de travaux."}
+                {"Débarrassement au fil de l'eau des débris sur les lieux du chantier par des rotations entre les horaires de travaux."}
               </p>
             </div>
           </div>
         </div>
 
-        {/* Texte en dessous des images */}
         <p className="text-sm md:text-lg text-black text-left">
           Nous sommes passionnément déterminés à vous offrir le summum de la qualité et de l’efficacité, car nous savons que vous méritez le meilleur.
         </p>
