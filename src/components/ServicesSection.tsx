@@ -43,7 +43,7 @@ const ServicesSection = () => {
           </Link>
         </div>
 
-        <p className="text-sm md:text-lg mb-8 text-left">
+        <p className="text-sm md:text-lg mb-8 text-left text-left text-justify whitespace-pre-line">
           Nous accompagnons nos clients avec une gamme variée de services allant du nettoyage de fin de chantier au nettoyage régulier de leurs propriétés. Notre équipe de professionnels hautement qualifiés est engagée à maintenir les normes les plus élevées de propreté et d’hygiène.
         </p>
 

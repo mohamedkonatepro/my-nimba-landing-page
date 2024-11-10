@@ -17,20 +17,20 @@ const AboutSection = () => {
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
             <span className="text-customBlue">À propos</span> de nous
           </h2>
-          <p className="text-base md:text-lg mb-4">
+          <p className="text-base md:text-lg mb-4 text-left text-justify whitespace-pre-line">
             <strong>MyNimba</strong> est une entreprise de nettoyage qui s’adapte aux besoins spécifiques exprimés par chacun de nos clients.
           </p>
-          <p className="text-base md:text-lg mb-4">
+          <p className="text-base md:text-lg mb-4 text-left text-justify whitespace-pre-line">
             {"Nous nous engageons à vous offrir une expérience de qualité exceptionnelle, reflétant notre dévouement à l’excellence."}
           </p>
-          <p className="text-base md:text-lg mb-4">
+          <p className="text-base md:text-lg mb-4 text-left text-justify whitespace-pre-line">
             Nous comprenons que chaque espace client est unique et nécessite une approche de nettoyage sur mesure, et c’est exactement ce que nous offrons.
           </p>
-          <p className="text-base md:text-lg mb-8">
+          <p className="text-base md:text-lg mb-8 text-left text-justify whitespace-pre-line">
             {"Notre objectif est de toujours surpasser vos attentes, pour cela nous renforçons la réussite de l'exécution de vos travaux de nettoyage par des équipes professionnelles extrêment qualifiés."}
           </p>
-          <p className="text-base md:text-lg mb-8">
-            Votre satisfaction est notre priorité et notre motivation, Notre équipe est notre force
+          <p className="text-base md:text-lg mb-8 text-left text-justify whitespace-pre-line">
+            Votre satisfaction est notre priorité et notre motivation, Notre équipe, notre force
           </p>
           <button className="bg-customBlue text-white px-6 py-3 rounded-xl">
             Prendre rendez-vous

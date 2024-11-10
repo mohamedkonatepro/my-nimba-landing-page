@@ -54,7 +54,7 @@ const CardReview: React.FC<CardReviewProps> = ({ name, reviewText }) => {
         </div>
 
         {/* Texte descriptif */}
-        <p className="text-gray-600 text-sm">{reviewText}</p>
+        <p className="text-gray-600 text-sm text-left text-justify whitespace-pre-line">{reviewText}</p>
       </div>
     </div>
   );

@@ -48,7 +48,10 @@ const Footer: React.FC = () => {
               <FaPhone size={20} className="mr-2" /> +33 7 58 80 80 80 (France) <br /> +224 629449847 (Guinée)
             </li>
             <li className="flex items-center">
-              <MdLocationOn size={25} className="mr-2" /> 1 – 3, boulevard Charles de Gaulle <br />  92707 Colombes Cedex
+              <MdLocationOn size={25} className="mr-2" /> 1 – 3, boulevard Charles de Gaulle <br />  92707 Colombes Cedex<br />
+            </li>
+            <li className="flex items-center">
+              <MdLocationOn size={25} className="mr-2" /> Lambanyi-Conakry / Guinée
             </li>
           </ul>
         </div>

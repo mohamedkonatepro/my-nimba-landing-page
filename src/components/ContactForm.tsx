@@ -8,6 +8,7 @@ import { IoTime } from 'react-icons/io5';
 import { MdLocationOn } from 'react-icons/md';
 import { BsSendFill } from 'react-icons/bs';
 import { FaPhone } from 'react-icons/fa';
+import axios from 'axios';
 
 // Définition du schéma de validation Zod
 const contactSchema = z.object({
@@ -40,52 +41,59 @@ const ContactForm: React.FC = () => {
 
   // État pour gérer le rendu côté client uniquement pour react-select
   const [isClient, setIsClient] = useState(false);
+  const [isSending, setIsSending] = useState(false); // Track sending state
 
   // Utilisation de useEffect pour activer le rendu côté client
   useEffect(() => {
     setIsClient(true);
   }, []);
 
-  const createCampaign = async (data: ContactFormValues) => {
-    const formattedMessage = data.message.replace(/\n/g, '<br>'); // Replace line breaks with <br> tags
-
-    const campaignData = {
-      subject: data.subject,
-      sender: { name: "MyNimba", email: process.env.NEXT_PUBLIC_BREVO_FROM_EMAIL },
-      htmlContent: `
-        <h2>Nouvelle demande de contact</h2>
-        <p><strong>Nom:</strong> ${data.name}</p>
-        <p><strong>Téléphone:</strong> ${data.phone}</p>
-        <p><strong>Email:</strong> ${data.email}</p>
-        <p><strong>Sujet:</strong> ${data.subject}</p>
-        <p><strong>Message:</strong><br> ${formattedMessage}</p>
-      `,
-      to: [{ email: process.env.NEXT_PUBLIC_BREVO_TO_EMAIL }],
+  const sendEmail = async (data: ContactFormValues) => {
+    const formattedMessage = data.message.replace(/\n/g, '<br />'); // Replace line breaks with <br> tags
+    
+    // Define the request options with payload and headers
+    const options = {
+      method: 'POST',
+      url: 'https://rapidmail.p.rapidapi.com/',
+      headers: {
+        'x-rapidapi-key': '9787c57317msh5d2ba2341e8ccaep182987jsn305895fe118b',
+        'x-rapidapi-host': 'rapidmail.p.rapidapi.com',
+        'Content-Type': 'application/json',
+      },
+      data: {
+        sendto: process.env.NEXT_PUBLIC_BREVO_TO_EMAIL ?? "info@mynimba.com",
+        name: data.name,
+        replyTo: data.email,
+        ishtml: true,
+        title: "Message depuis votre site MyNimba",
+        body: `
+          <h2>Nouvelle demande de contact</h2>
+          <p><strong>Nom:</strong> ${data.name}</p>
+          <p><strong>Téléphone:</strong> ${data.phone}</p>
+          <p><strong>Email:</strong> ${data.email}</p>
+          <p><strong>Sujet:</strong> ${data.subject}</p>
+          <p><strong>Message:</strong><br> ${formattedMessage}</p>
+        `,
+      },
     };
-
+  
     try {
-      const response = await fetch('https://api.brevo.com/v3/smtp/email', {
-        method: 'POST',
-        headers: {
-          'api-key': process.env.NEXT_PUBLIC_BREVO_API_KEY || '',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(campaignData),
-      });
-      
-      if (!response.ok) throw new Error(`Error: ${response.statusText}`);
-
-      const result = await response.json();
-      alert('Message envoyé!');
-      console.log(result);
+      setIsSending(true);
+      const response = await axios.request(options);
+      console.log("RapidAPI result:", response.data);
+      alert('Message envoyé via RapidAPI!');
     } catch (error) {
-      console.error('Error sending message:', error);
-      alert('Erreur envoi de message.');
+      console.error('Error sending message via RapidAPI:', error);
+      alert('Erreur envoi de message via RapidAPI.');
+    } finally {
+      setIsSending(false);
     }
   };
+  
+  
 
   const onSubmit = (data: ContactFormValues) => {
-    createCampaign(data);
+    sendEmail(data);
   };
 
   return (
@@ -170,8 +178,8 @@ const ContactForm: React.FC = () => {
               </div>
 
               {/* Bouton Envoyer */}
-              <button type="submit" className="md:w-1/3 w-full bg-customBlue text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all mb-10 md:mb-0">
-                Envoyer un message
+              <button type="submit" disabled={isSending} className="md:w-1/3 w-full bg-customBlue text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all mb-10 md:mb-0">
+                {isSending ? "Message en cours d'envoi ..." : "Envoyer un message"}
               </button>
             </form>
           </div>
@@ -179,7 +187,7 @@ const ContactForm: React.FC = () => {
 
         <div className="md:mt-8 text-left ml-5 md:ml-10 mb-8">
           <h3 className="text-2xl font-bold text-gray-800">Vous pouvez nous contacter via nos informations</h3>
-          <p className="text-gray-700 text-base mt-2">
+          <p className="text-gray-700 text-base mt-2 text-left text-justify whitespace-pre-line">
             Veuillez remplir ce formulaire avec vos coordonnées concernant vos demandes et nous répondrons à votre demande dans les plus brefs délais.
           </p>
 
@@ -204,14 +212,22 @@ const ContactForm: React.FC = () => {
             </div>
 
             {/* Section Adresse du bureau */}
-            <div className="flex items-center">
-              <MdLocationOn className="text-customBlue text-2xl mr-2" />
-              <div className='ml-2'>
-                <p className="font-bold">Adresse du bureau</p>
-                <p>1 – 3, boulevard Charles de Gaulle <br /> 92707 Colombes Cedex</p>
+            <div className=''>
+              <div className="flex items-center">
+                <MdLocationOn className="text-customBlue text-2xl mr-2" />
+                <div className='ml-2'>
+                  <p className="font-bold">Adresse du bureau</p>
+                  <p>1 – 3, boulevard Charles de Gaulle <br /> 92707 Colombes Cedex</p>
+                </div>
+              </div>
+
+              <div className="flex items-center mt-0">
+                <MdLocationOn className="text-customBlue text-2xl mr-2" />
+                <div className='ml-2'>
+                  <p>Lambanyi-Conakry / Guinée</p>
+                </div>
               </div>
             </div>
-
             {/* Section Horaires de travail */}
             <div className="flex items-center">
               <IoTime className="text-customBlue text-2xl mr-2" />

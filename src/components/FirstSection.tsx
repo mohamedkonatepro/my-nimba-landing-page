@@ -11,7 +11,7 @@ const FirstSection = () => {
           <h1 className="text-3xl md:text-4xl font-bold">
             <span className="text-customBlue">Nettoyage</span> professionnel de fin de chantier par <span className="text-customGreen">MyNimba</span>
           </h1>
-          <p className="text-base md:text-lg mt-4">
+          <p className="text-base md:text-lg mt-4 text-left text-justify whitespace-pre-line">
             Entreprise de nettoyage de premier plan, dédiée à fournir des services de la plus haute qualité dans le respect des normes de sécurité et d’hygiène. <br /> 
             Nos équipes sont formées pour maintenir vos surfaces dans un état de propreté optimal en respectant les délais de prestation.
           </p>
