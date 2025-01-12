@@ -64,7 +64,7 @@ const Header = () => {
         {/* Call-to-Action Button (visible en mode desktop) */}
         <div className="hidden md:block">
           <Link
-            href="#contact"
+            href="https://www.propale.co/create-prospect/edd218cf-dfc3-443d-a369-2ecaa74cea86"
             className="bg-customBlue rounded-xl text-white px-4 py-3 hover:bg-blue-700 transition-all"
           >
             Devis gratuit
@@ -93,7 +93,7 @@ const Header = () => {
             ))}
             {/* Call-to-Action Button dans le menu mobile */}
             <Link
-              href="#contact"
+              href="https://www.propale.co/create-prospect/edd218cf-dfc3-443d-a369-2ecaa74cea86"
               className="bg-customBlue rounded-xl text-white px-6 py-3 hover:bg-blue-700 transition-all"
             >
               Devis gratuit

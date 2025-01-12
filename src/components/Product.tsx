@@ -29,7 +29,7 @@ const Product: React.FC<ProductProps> = ({ imageSrc, title, description }) => {
         </p>
 
         {/* Call to action link */}
-        <a href="#contact" className="bg-customBlue text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-all w-full block text-center">
+        <a href="https://www.propale.co/create-prospect/edd218cf-dfc3-443d-a369-2ecaa74cea86" className="bg-customBlue text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-all w-full block text-center">
           Demandez un devis gratuit
         </a>
       </div>

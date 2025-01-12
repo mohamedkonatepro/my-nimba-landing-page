@@ -21,7 +21,7 @@ const FirstSection = () => {
             <a href="#contact" className="bg-customBlue text-white px-6 py-3 rounded-xl">
               Contactez-nous
             </a>
-            <a href="#contact" className="bg-white border border-customGreen text-customGreen px-6 py-3 rounded-xl flex items-center justify-center space-x-2">
+            <a href="https://www.propale.co/create-prospect/edd218cf-dfc3-443d-a369-2ecaa74cea86" className="bg-white border border-customGreen text-customGreen px-6 py-3 rounded-xl flex items-center justify-center space-x-2">
               <span>Devis gratuit</span>
               <MdArrowOutward className="text-customGreen" size={20} />
             </a>
